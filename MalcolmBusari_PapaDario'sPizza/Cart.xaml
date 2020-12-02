@@ -1,0 +1,68 @@
+﻿<Page
+    x:Class="MalcolmBusari_PapaDario_sPizza.Cart"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MalcolmBusari_PapaDario_sPizza"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+
+        <ListView Name="PizzaList"
+                  Margin="24">
+            <ListView.HeaderTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical">
+                        <TextBox Text="CART" IsReadOnly="True" Margin="24, 48, 24, 0" Foreground="OrangeRed" FontWeight="Bold" FontSize="48" Background="{x:Null}" BorderBrush="{x:Null}" AllowFocusOnInteraction="False" AllowFocusWhenDisabled="False" IsDoubleTapEnabled="False" TextAlignment="Center"></TextBox>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.HeaderTemplate>
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:Pizza">
+                    <StackPanel Orientation="Horizontal" Background="FloralWhite">
+
+                        <TextBlock  Text="{x:Bind PizzaID}"
+                                    Margin="24, 0, 24 ,0" Height="60" Width="200"  FontSize="18" />
+                        <TextBlock  Text="{x:Bind Name}"
+                                    Margin="24, 0, 24 ,0" Height="60" Width="200"  FontSize="18" />
+                        <TextBlock  Text="{x:Bind Price}"
+                                    Margin="24, 0, 24 ,0" Height="60" Width="200" FontSize="18" />
+                        <TextBlock  Text="{x:Bind Size}"
+                                    Margin="24, 0, 24 ,0" Height="60" Width="200" FontSize="18"/>
+                        <TextBlock  Text="{x:Bind Quantity}"
+                                    Margin="24, 0, 24 ,0" Height="60" Width="200" FontSize="18"/>
+                        <TextBlock  Text="{x:Bind OrderNo}"
+                                    Margin="24, 0, 24 ,0" Height="60" Width="200" FontSize="18"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+           
+        </ListView>
+
+        <ListView Name="SidesList">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:Sides">
+                    <StackPanel Orientation="Horizontal" Background="FloralWhite">
+
+                        <TextBlock  Text="{x:Bind SidesID}"
+                                    Margin="24, 0, 24 ,0" Height="60" Width="200"  FontSize="18" />
+                        <TextBlock  Text="{x:Bind Name}"
+                                    Margin="24, 0, 24 ,0" Height="60" Width="200"  FontSize="18" />
+                        <TextBlock  Text="{x:Bind Price}"
+                                    Margin="24, 0, 24 ,0" Height="60" Width="200" FontSize="18" />
+                        <TextBlock  Text="{x:Bind Sauce}"
+                                    Margin="24, 0, 24 ,0" Height="60" Width="200" FontSize="18"/>
+                        <TextBlock  Text="{x:Bind Serving}"
+                                    Margin="24, 0, 24 ,0" Height="60" Width="200" FontSize="18"/>
+                        <TextBlock  Text="{x:Bind OrderNo}"
+                                    Margin="24, 0, 24 ,0" Height="60" Width="200" FontSize="18"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="checkOutBtn" Content="CHECKOUT" Margin="24, 24, 24 ,0" FontWeight="Bold" FontSize="24" Height="60" Width="250" Foreground="White" Background="Green" VerticalAlignment="Bottom" HorizontalAlignment="Center" ></Button>
+        <Button x:Name="homeBtn" Content="RETURN TO HOME" Margin="24, 24, 24 ,0" FontWeight="Bold" FontSize="24" Height="60" Width="250" Foreground="White" Background="Green" VerticalAlignment="Bottom" Click="homeBtn_Click"></Button>
+    </Grid>
+</Page>

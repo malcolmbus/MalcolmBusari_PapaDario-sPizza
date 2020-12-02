@@ -1,0 +1,83 @@
+﻿<Page
+    x:Class="MalcolmBusari_PapaDario_sPizza.CustomPizzaPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MalcolmBusari_PapaDario_sPizza"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <ScrollViewer VerticalScrollMode="Enabled">
+        <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0"  Orientation="Horizontal"  VerticalAlignment="Center" HorizontalAlignment="Left" Background="OrangeRed" Width="1600">
+                    <Button x:Name="homeBtn" Content="Papa Dario's"  Margin="0, 0, 24, 0" Foreground="White"  FontFamily="Brush Script MT" FontSize="72" Background="{x:Null}" AllowFocusOnInteraction="False" AllowFocusWhenDisabled="False" Click="homeBtn_Click" ></Button>
+                    <Button x:Name="orderBtn" Content="PLACE AN ORDER" Margin="24, 0, 24 ,0" Height="60" Width="170" Foreground="White" Background="OrangeRed" FontWeight="Bold" FontSize="18" Click="orderBtn_Click" />
+                    <Button x:Name="dealsBtn" Content="DEALS &amp; COUPONS" Margin="24, 0, 24 ,0" Height="60" Width="190" Foreground="White" Background="OrangeRed" FontWeight="Bold" FontSize="18" Click="dealsBtn_Click" />
+                    <Button x:Name="aboutBtn" Content="ABOUT" Margin="24, 0, 24 ,0" Height="60" Width="170" Foreground="White" Background="OrangeRed" FontWeight="Bold" FontSize="18" Click="aboutBtn_Click" />
+                    <Button x:Name="reviewBtn" Content="CONTACT US" Margin="24, 0, 24 ,0"  Height="60" Width="170" Foreground="White" Background="OrangeRed" FontWeight="Bold" FontSize="18" Click="reviewBtn_Click" />
+                    <Button x:Name="signInBtn" Content="SIGN IN" Margin="24, 0, 24 ,0" Height="60" Width="170" Foreground="White" Background="OrangeRed" FontWeight="Bold" FontSize="18" Click="signInBtn_Click" />
+                </StackPanel>
+                <StackPanel Grid.Row="1">
+                <Button x:Name="cartBtn" Content="CART" Height="60" Width="170" Foreground="OrangeRed" Background="White"  FontSize="16" HorizontalAlignment="Right" Click="cartBtn_Click_1"/>
+                <TextBox Text="CREATE YOUR OWN" IsReadOnly="True" Margin="24, 0, 24, 0" Foreground="OrangeRed" FontWeight="Bold" FontSize="48" Background="{x:Null}" BorderBrush="{x:Null}" AllowFocusOnInteraction="False" AllowFocusWhenDisabled="False" IsDoubleTapEnabled="False" TextAlignment="Center"></TextBox>
+                </StackPanel>
+                <StackPanel Grid.Row="2" Orientation="Vertical" Background="FloralWhite">
+                    <ComboBox x:Name="cmbBox1" PlaceholderText="SELECT A SIZE" Margin="24, 0, 24, 0" FontSize="18" Height="60" Width="500" HorizontalAlignment="Center" Background="White">
+                        <ComboBoxItem x:Name="small" Content="Small -$8.99"></ComboBoxItem>
+                        <ComboBoxItem x:Name="med" Content="Medium -$12.99"></ComboBoxItem>
+                        <ComboBoxItem x:Name="large" Content="Large -$16.99"></ComboBoxItem>
+                    </ComboBox>
+                <ComboBox x:Name="cmbBox2" PlaceholderText="CHOOSE YOUR CRUST" Margin="24, 0, 24, 0" FontSize="18" Height="60" Width="500" HorizontalAlignment="Center" Background="White">
+                        <ComboBoxItem x:Name="thin" Content="Thin"></ComboBoxItem>
+                        <ComboBoxItem x:Name="thick" Content="Thick"></ComboBoxItem>
+                        <ComboBoxItem x:Name="pan" Content="Pan"></ComboBoxItem>
+                    </ComboBox>
+                <TextBox Text="SELECT A SAUCE"  IsReadOnly="True" Margin="24, 24, 24 ,0" FontSize="24" FontWeight="Bold" Height="50" Width="500" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" AllowFocusOnInteraction="False" AllowFocusWhenDisabled="False" IsDoubleTapEnabled="False"></TextBox>
+                <RadioButton x:Name="marinaraRadio" Content="Marinara Sauce"  Margin="24, 0, 24, 0" FontSize="18" Height="60" Width="500" HorizontalAlignment="Center"></RadioButton>
+                <RadioButton x:Name="bbqRadio" Content="BBQ Sauce"  Margin="24, 0, 24, 0" FontSize="18" Height="60" Width="500" HorizontalAlignment="Center"></RadioButton>
+                <RadioButton x:Name="alfredoRadio" Content="Alfredo Sauce"  Margin="24, 0, 24, 0" FontSize="18" Height="60" Width="500" HorizontalAlignment="Center"></RadioButton>
+                </StackPanel>
+                <StackPanel Grid.Row="3" Orientation="Vertical" Background="FloralWhite">
+                    <TextBox Text="TOPPINGS"  IsReadOnly="True" Margin="24, 24, 24 ,0" FontSize="24" FontWeight="Bold" Height="50" Width="250" Background="{x:Null}" BorderBrush="{x:Null}" AllowFocusOnInteraction="False" AllowFocusWhenDisabled="False" IsDoubleTapEnabled="False" TextAlignment="Center"></TextBox>
+                </StackPanel>
+                <StackPanel Grid.Row="4" Orientation="Horizontal" Background="FloralWhite">
+                <CheckBox x:Name="topping1" Content="Pepperoni"  Margin="24, 0, 24, 0" FontSize="18" Height="60" Width="250" HorizontalAlignment="Center"/>
+                <CheckBox x:Name="topping2" Content="Chicken"  Margin="24, 0, 24, 0" FontSize="18" Height="60" Width="250" HorizontalAlignment="Center"></CheckBox>
+                <CheckBox x:Name="topping3" Content="Ground Beef"  Margin="24, 0, 24, 0" FontSize="18" Height="60" Width="250" HorizontalAlignment="Center"></CheckBox>
+                <CheckBox x:Name="topping4" Content="Steak"  Margin="24, 0, 24, 0" FontSize="18" Height="60" Width="250" HorizontalAlignment="Center"></CheckBox>
+                <CheckBox x:Name="topping5" Content="Italian Sausage"  Margin="24, 0, 24, 0" FontSize="18" Height="60" Width="250" HorizontalAlignment="Center"></CheckBox>
+                </StackPanel>
+                <StackPanel Grid.Row="5" Orientation="Horizontal" Background="FloralWhite">
+                <CheckBox x:Name="topping6" Content="Green Peppers"  Margin="24, 0, 24, 0" FontSize="18" Height="60" Width="250" HorizontalAlignment="Center"></CheckBox>
+                <CheckBox x:Name="topping7" Content="Mushrooms"  Margin="24, 0, 24, 0" FontSize="18" Height="60" Width="250" HorizontalAlignment="Center"></CheckBox>
+                <CheckBox x:Name="topping8" Content="Red Onions"  Margin="24, 0, 24, 0" FontSize="18" Height="60" Width="250" HorizontalAlignment="Center"></CheckBox>
+                <CheckBox x:Name="topping9" Content="Tomatoes"  Margin="24, 0, 24, 0" FontSize="18" Height="60" Width="250" HorizontalAlignment="Center"  ></CheckBox>
+                <CheckBox x:Name="topping10" Content="Olives"  Margin="24, 0, 24, 0" FontSize="18" Height="60" Width="250" HorizontalAlignment="Center" ></CheckBox>
+                </StackPanel>
+                <StackPanel Grid.Row="6" Orientation="Horizontal" Background="FloralWhite">
+                <CheckBox x:Name="topping11" Content="Chilli Peppers"  Margin="24, 0, 24, 0" FontSize="18" Height="60" Width="250" HorizontalAlignment="Center"></CheckBox>
+                <CheckBox x:Name="topping12" Content="Mozzarella"  Margin="24, 0, 24, 0" FontSize="18" Height="60" Width="250" HorizontalAlignment="Center"></CheckBox>
+                <CheckBox x:Name="topping13" Content="Cheddar"  Margin="24, 0, 24, 0" FontSize="18" Height="60" Width="250" HorizontalAlignment="Center"></CheckBox>
+                <CheckBox x:Name="topping14" Content="Feta"  Margin="24, 0, 24, 0" FontSize="18" Height="60" Width="250" HorizontalAlignment="Center"></CheckBox>
+                <CheckBox x:Name="topping15" Content="Parmesan"  Margin="24, 0, 24, 0" FontSize="18" Height="60" Width="250" HorizontalAlignment="Center"></CheckBox>
+                </StackPanel>
+                <StackPanel Grid.Row="7" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="calcBtn" Content="CALCULATE" Margin="24, 0, 0 ,0" FontWeight="Bold" FontSize="18" Height="60" Width="200" Foreground="White" Background="Green" Click="cartBtn_Click"></Button>
+                <TextBox x:Name="subTotalTxtBox" PlaceholderText="SUBTOTAL" IsReadOnly="True" Margin="0, 0, 24 ,0" FontSize="18"  Height="60" Width="200" AllowFocusOnInteraction="False" AllowFocusWhenDisabled="False" IsDoubleTapEnabled="False"></TextBox>
+                <Button x:Name="addCartBtn" Content="ADD TO CART" Margin="24, 0, 24 ,0" FontWeight="Bold" FontSize="18" Height="60" Width="200" Foreground="White" Background="Green" Click="addCartBtn_Click"></Button>
+            </StackPanel>
+            </Grid>
+            </ScrollViewer>
+</Page>

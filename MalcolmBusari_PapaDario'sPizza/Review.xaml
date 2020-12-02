@@ -1,0 +1,41 @@
+﻿<Page
+    x:Class="MalcolmBusari_PapaDario_sPizza.Review"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MalcolmBusari_PapaDario_sPizza"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <ScrollViewer VerticalScrollMode="Enabled">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0"  Orientation="Horizontal"  VerticalAlignment="Center" HorizontalAlignment="Left" Background="OrangeRed" Width="1600">
+                <Button x:Name="homeBtn" Content="Papa Dario's"  Margin="0, 0, 24, 0" Foreground="White"  FontFamily="Brush Script MT" FontSize="72" Background="{x:Null}" AllowFocusOnInteraction="False" AllowFocusWhenDisabled="False" Click="homeBtn_Click"></Button>
+                <Button x:Name="orderBtn" Content="PLACE AN ORDER" Margin="24, 0, 24 ,0" Height="60" Width="170" Foreground="White" Background="OrangeRed" FontWeight="Bold" FontSize="18" Click="orderBtn_Click"/>
+                <Button x:Name="dealsBtn" Content="DEALS &amp; COUPONS" Margin="24, 0, 24 ,0" Height="60" Width="190" Foreground="White" Background="OrangeRed" FontWeight="Bold" FontSize="18" Click="dealsBtn_Click"/>
+                <Button x:Name="aboutBtn" Content="ABOUT" Margin="24, 0, 24 ,0" Height="60" Width="170" Foreground="White" Background="OrangeRed" FontWeight="Bold" FontSize="18" Click="aboutBtn_Click"/>
+                <Button x:Name="reviewBtn" Content="CONTACT US" Margin="24, 0, 24 ,0"  Height="60" Width="170" Foreground="White" Background="OrangeRed" FontWeight="Bold" FontSize="18" Click="reviewBtn_Click"/>
+                <Button x:Name="signInBtn" Content="SIGN IN" Margin="24, 0, 24 ,0" Height="60" Width="170" Foreground="White" Background="OrangeRed" FontWeight="Bold" FontSize="18" Click="signInBtn_Click"/>
+            </StackPanel>
+            <StackPanel Grid.Row="1" Orientation="Vertical">
+                <TextBox Text="SHARE YOUR FEEDBACK" IsReadOnly="True" Margin="24, 48, 24, 0" Foreground="OrangeRed" FontWeight="Bold" FontSize="48" Background="{x:Null}" BorderBrush="{x:Null}" AllowFocusOnInteraction="False" AllowFocusWhenDisabled="False" IsDoubleTapEnabled="False"></TextBox>
+            </StackPanel>
+            <StackPanel Grid.Row="2" Orientation="Vertical" Background="FloralWhite">
+                <TextBox x:Name="fName" PlaceholderText="First Name" Margin="24, 24, 24 ,0" FontSize="24" Height="50" Width="500" HorizontalAlignment="Left" Background="White"></TextBox>
+                <TextBox x:Name="lName" PlaceholderText="Last Name" Margin="24, 24, 24 ,0" FontSize="24" Height="50" Width="500" HorizontalAlignment="Left" Background="White"></TextBox>
+                <TextBox x:Name="email" PlaceholderText="Email" Margin="24, 24, 24 ,0" FontSize="24" Height="50" Width="500" HorizontalAlignment="Left" Background="White"></TextBox>
+                <TextBox Text="Please Enter Your Feedback Below"  IsReadOnly="True" Margin="24, 24, 24 ,0" FontSize="24" FontWeight="Bold" Height="50" Width="500" HorizontalAlignment="Left" Background="{x:Null}" BorderBrush="{x:Null}" AllowFocusOnInteraction="False" AllowFocusWhenDisabled="False" IsDoubleTapEnabled="False"></TextBox>
+                <TextBox x:Name="feedback" Margin="24, 0, 24 ,0" Height="400" Width="1000" HorizontalAlignment="Left" Background="White" FontSize="18" FontFamily="Segoe UI"/>
+            </StackPanel>
+            <StackPanel Grid.Row="3" Orientation="Vertical">
+                <Button x:Name="submitBtn" Content="SUBMIT" Margin="24, 0, 24 ,0" FontWeight="Bold" FontSize="24" Height="60" Width="250" Foreground="White" Background="Green" HorizontalAlignment="Center" Click="submitBtn_Click"></Button>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Page>

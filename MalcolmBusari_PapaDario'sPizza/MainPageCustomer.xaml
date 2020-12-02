@@ -1,0 +1,52 @@
+﻿<Page
+    x:Class="MalcolmBusari_PapaDario_sPizza.MainPageCustomer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MalcolmBusari_PapaDario_sPizza"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <ScrollViewer VerticalScrollMode="Enabled">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0"  Orientation="Horizontal"  VerticalAlignment="Center" HorizontalAlignment="Left" Background="OrangeRed" Width="1600">
+                <Button x:Name="homeBtn" Content="Papa Dario's"  Margin="0, 0, 24, 0" Foreground="White"  FontFamily="Brush Script MT" FontSize="72" Background="{x:Null}" AllowFocusOnInteraction="False" AllowFocusWhenDisabled="False" Click="homeBtn_Click" ></Button>
+                <Button x:Name="orderBtn" Content="PLACE AN ORDER" Margin="24, 0, 24 ,0" Height="60" Width="170" Foreground="White" Background="OrangeRed" FontWeight="Bold" FontSize="18" Click="orderBtn_Click"/>
+                <Button x:Name="dealsBtn" Content="DEALS &amp; COUPONS" Margin="24, 0, 24 ,0" Height="60" Width="190" Foreground="White" Background="OrangeRed" FontWeight="Bold" FontSize="18" Click="dealsBtn_Click"/>
+                <Button x:Name="aboutBtn" Content="ABOUT" Margin="24, 0, 24 ,0" Height="60" Width="170" Foreground="White" Background="OrangeRed" FontWeight="Bold" FontSize="18" Click="aboutBtn_Click"/>
+                <Button x:Name="reviewBtn" Content="CONTACT US" Margin="24, 0, 24 ,0"  Height="60" Width="170" Foreground="White" Background="OrangeRed" FontWeight="Bold" FontSize="18" Click="reviewBtn_Click"/>
+                <Button x:Name="signOutBtn" Content="SIGN OUT" Margin="24, 0, 24 ,0" Height="60" Width="170" Foreground="White" Background="OrangeRed" FontWeight="Bold" FontSize="18" Click="signOutBtn_Click" />
+            </StackPanel>
+            <StackPanel Grid.Row="1" Orientation="Vertical">
+                <Button x:Name="cartBtn" Content="CART" Height="60" Width="170" Foreground="OrangeRed" Background="White"  FontSize="16" HorizontalAlignment="Right" Click="cartBtn_Click"/>
+                <TextBox Text="FEATURED SPECIALS" IsReadOnly="True" Margin="24, 0, 24, 0" Foreground="OrangeRed" FontWeight="Bold" FontSize="48" Background="{x:Null}" BorderBrush="{x:Null}" AllowFocusOnInteraction="False" AllowFocusWhenDisabled="False" IsDoubleTapEnabled="False"></TextBox>
+            </StackPanel>
+            <StackPanel Grid.Row="2" Orientation="Horizontal" Background="FloralWhite">
+                <Image Height="300" Width="400" Source="images/pizzaspecial.jpg" Stretch="Fill"  Margin="48, 24, 24, 0" HorizontalAlignment="Left" />
+                <TextBlock Margin="0, 24, 24, 0" FontWeight="Bold" FontSize="24" FontFamily="Segoe UI"><Run/><LineBreak/><Run/><LineBreak/><Run Text="Papa's Margherita"/><LineBreak/><Run/><LineBreak/><Run Text="Starting from $9.99!"/></TextBlock>
+                <Image Height="300" Width="400" Source="images/pizzaspecial2.jpg" Stretch="Fill"  Margin="48, 24, 24, 0" HorizontalAlignment="Left" />
+                <TextBlock Margin="0, 24, 24, 0" FontWeight="Bold" FontSize="24" FontFamily="Segoe UI"><Run/><LineBreak/><LineBreak/><Run Text="Order now"/><Run Text=" "/><Run Text="to get"/><Run Text=" 1"/><Run Text="0% off "/><LineBreak/><Run Text="all online orders "/><LineBreak/><Run Text="over $15!"/><LineBreak/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+
+            </StackPanel>
+            <StackPanel Grid.Row="3" Orientation="Vertical" Background="FloralWhite">
+            </StackPanel>
+            <StackPanel Grid.Row="4" Orientation="Vertical" Background="FloralWhite">
+            </StackPanel>
+            <StackPanel Grid.Row="5" Orientation="Vertical" Background="FloralWhite">
+                <Button x:Name="moreDealsBtn" Content="VIEW MORE DEALS" Margin="24, 0, 24 ,0" FontWeight="Bold" FontSize="24" Height="60" Width="250" Foreground="White" Background="Green" HorizontalAlignment="Center" Click="moreDealsBtn_Click" ></Button>
+            </StackPanel>
+            <StackPanel Grid.Row="6" Orientation="Vertical">
+                <TextBox Text="RECENT ORDERS" IsReadOnly="True" Margin="24, 24, 24, 0" Foreground="OrangeRed" FontWeight="Bold" FontSize="24" HorizontalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" AllowFocusOnInteraction="False" AllowFocusWhenDisabled="False" IsDoubleTapEnabled="False"></TextBox>
+            </StackPanel>
+        </Grid>
+        </ScrollViewer>
+</Page>

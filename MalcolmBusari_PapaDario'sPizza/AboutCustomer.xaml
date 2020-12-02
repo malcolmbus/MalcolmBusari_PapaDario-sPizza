@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="MalcolmBusari_PapaDario_sPizza.AboutCustomer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MalcolmBusari_PapaDario_sPizza"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <ScrollViewer VerticalScrollMode="Enabled">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0"  Orientation="Horizontal"  VerticalAlignment="Center" HorizontalAlignment="Left" Background="OrangeRed" Width="1600">
+                <Button x:Name="homeBtn" Content="Papa Dario's"  Margin="0, 0, 24, 0" Foreground="White"  FontFamily="Brush Script MT" FontSize="72" Background="{x:Null}" AllowFocusOnInteraction="False" AllowFocusWhenDisabled="False" Click="homeBtn_Click" ></Button>
+                <Button x:Name="orderBtn" Content="PLACE AN ORDER" Margin="24, 0, 24 ,0" Height="60" Width="170" Foreground="White" Background="OrangeRed" FontWeight="Bold" FontSize="18" Click="orderBtn_Click" />
+                <Button x:Name="dealsBtn" Content="DEALS &amp; COUPONS" Margin="24, 0, 24 ,0" Height="60" Width="190" Foreground="White" Background="OrangeRed" FontWeight="Bold" FontSize="18" Click="dealsBtn_Click" />
+                <Button x:Name="aboutBtn" Content="ABOUT" Margin="24, 0, 24 ,0" Height="60" Width="170" Foreground="White" Background="OrangeRed" FontWeight="Bold" FontSize="18" Click="aboutBtn_Click" />
+                <Button x:Name="reviewBtn" Content="CONTACT US" Margin="24, 0, 24 ,0"  Height="60" Width="170" Foreground="White" Background="OrangeRed" FontWeight="Bold" FontSize="18" Click="reviewBtn_Click" />
+                <Button x:Name="signOutBtn" Content="SIGN OUT" Margin="24, 0, 24 ,0" Height="60" Width="170" Foreground="White" Background="OrangeRed" FontWeight="Bold" FontSize="18" Click="signOutBtn_Click"  />
+            </StackPanel>
+            <StackPanel Grid.Row="1" Orientation="Vertical">
+                <TextBox Text="ABOUT US" IsReadOnly="True" Margin="24, 48, 24, 0" Foreground="OrangeRed" FontWeight="Bold" FontSize="48" Background="{x:Null}" BorderBrush="{x:Null}" AllowFocusOnInteraction="False" AllowFocusWhenDisabled="False" IsDoubleTapEnabled="False" TextAlignment="Center"></TextBox>
+            </StackPanel>
+            <StackPanel Grid.Row="2" Orientation="Vertical"  Background="FloralWhite">
+                <TextBlock Margin="24, 0, 24 ,0" Width="1500" Height="400" FontSize="18" FontFamily="Segoe UI"><Run Text="Papa Dario's Food Emporium came from very humble beginnings, starting out as a corner store owned by an Italian family,"/><Run Text=" "/><Run Text="it has launched into one of the biggest food chains in the&#xA;world"/><Run Text=", "/><Run Text="with over 5,000 stores worldwide including Papa Dario's Pizzeria. In 1965, "/><Run Text="we"/><Run Text=" had opened their second location in Toronto and began selling freshly-made Neapolitan &#xA;style pizza among the several other food products. Our pizza grew in popularity and we had customers from all over the city coming to try it out at this specific location. With the "/><LineBreak/><Run Text="great"/><Run Text=" "/><Run Text="success of our store and the high demand for the pizza, we decided to "/><Run Text="start a "/><Run Text="separate pizza chain in different parts of the GTA"/><Run Text=" with an updated menu."/><Run Text="&#xA;&#xA;Since then we've been serving our customers"/><Run Text=" pizza made from the highest quality ingredients"/><Run Text=" in different parts of Canada"/><Run Text=","/><Run Text=" the"/><Run Text=" US and more recently in the UK,"/><Run Text=" paying close att"/><Run Text="ention"/><LineBreak/><Run Text="to customer feedback "/><Run Text="to make sure they are satisfied. "/><Run Text="&#xA;&#xA;Papa Dario's would not be here today without all the love we have received from all the customers in our city and worldwide. We would like to thank you for dining at Papa Dario's "/><LineBreak/><Run Text="an"/><Run Text="d "/><Run Text="w"/><Run Text="e "/><Run Text="hope you are satisfied with our products. "/></TextBlock>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Page>

@@ -1,0 +1,56 @@
+﻿<Page
+    x:Class="MalcolmBusari_PapaDario_sPizza.ViewCustomersAdmin"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MalcolmBusari_PapaDario_sPizza"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <ListView Name="CustomerList"
+                  SelectionMode="Single"
+                  ScrollViewer.VerticalScrollBarVisibility="Auto"
+                  ScrollViewer.IsVerticalRailEnabled="True"
+                  ScrollViewer.VerticalScrollMode="Enabled"
+                  ScrollViewer.HorizontalScrollMode="Enabled"
+                  ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                  ScrollViewer.IsHorizontalRailEnabled="True"
+                  Margin="24">
+            <ListView.HeaderTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Left">
+                        <TextBlock Text="ID" Margin="24, 0, 24 ,0" Height="60" Width="200" Foreground="OrangeRed" FontWeight="Bold" FontSize="18" />
+                        <TextBlock Text="First Name" Margin="24, 0, 24 ,0" Height="60" Width="200" Foreground="OrangeRed" FontWeight="Bold" FontSize="18" />
+                        <TextBlock Text="Last Name" Margin="24, 0, 24 ,0" Height="60" Width="200" Foreground="OrangeRed" FontWeight="Bold" FontSize="18" />
+                        <TextBlock Text="Email" Margin="24, 0, 24 ,0" Height="60" Width="200" Foreground="OrangeRed" FontWeight="Bold" FontSize="18" />
+                        <TextBlock Text="Phone Number" Margin="24, 0, 24 ,0" Height="60" Width="200" Foreground="OrangeRed" FontWeight="Bold" FontSize="18" />
+                        <TextBlock Text="Password" Margin="24, 0, 24 ,0" Height="60" Width="200" Foreground="OrangeRed" FontWeight="Bold" FontSize="18" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.HeaderTemplate>
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:Customer">
+                    <StackPanel Orientation="Horizontal" Background="FloralWhite">
+                        <TextBlock Name="ItemId"
+                                    Text="{x:Bind CustomerID}"
+                                    Margin="24, 0, 24 ,0" Height="60" Width="200"  FontSize="18" />
+                        <TextBlock Name="ItemName"
+                                    Text="{x:Bind FirstName}"
+                                    Margin="24, 0, 24 ,0" Height="60" Width="200"  FontSize="18" />
+                        <TextBlock Text="{x:Bind LastName}"
+                                   Margin="24, 0, 24 ,0" Height="60" Width="200" FontSize="18" />
+                        <TextBlock Text="{x:Bind Email}"
+                                  Margin="24, 0, 24 ,0" Height="60" Width="200" FontSize="18"/>
+                        <TextBlock Text="{x:Bind PhoneNumber}"
+                                   Margin="24, 0, 24 ,0" Height="60" Width="200" FontSize="18"/>
+                        <TextBlock Text="{x:Bind CustPassword}"
+                                   Margin="24, 0, 24 ,0" Height="60" Width="200" FontSize="18"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="homeBtn" Content="RETURN TO HOME" Margin="24, 24, 24 ,0" FontWeight="Bold" FontSize="24" Height="60" Width="250" Foreground="White" Background="Green" VerticalAlignment="Bottom" HorizontalAlignment="Center" Click="homeBtn_Click"></Button>
+    </Grid>
+</Page>

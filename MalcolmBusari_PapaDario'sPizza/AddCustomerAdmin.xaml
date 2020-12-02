@@ -1,0 +1,53 @@
+﻿<Page
+    x:Class="MalcolmBusari_PapaDario_sPizza.AddCustomerAdmin"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MalcolmBusari_PapaDario_sPizza"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    
+    <ScrollViewer VerticalScrollMode="Enabled">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0"  Orientation="Horizontal"  VerticalAlignment="Center" HorizontalAlignment="Left" Background="OrangeRed" Width="1600">
+                    <Button x:Name="homeBtn" Content="Papa Dario's"  Margin="0, 0, 24, 0" Foreground="White"  FontFamily="Brush Script MT" FontSize="72" Background="{x:Null}" AllowFocusOnInteraction="False" AllowFocusWhenDisabled="False" Click="homeBtn_Click" ></Button>
+                    <Button x:Name="custBtn" Content="VIEW CUSTOMERS" Margin="24, 0, 24 ,0" Height="60" Width="180" Foreground="White" Background="OrangeRed" FontWeight="Bold" FontSize="18" Click="custBtn_Click" />
+                    <Button x:Name="addDelcustBtn" Content="ADD/DELETE CUSTOMERS" Margin="24, 0, 24 ,0" Height="60" Width="230" Foreground="White" Background="OrangeRed" FontWeight="Bold" FontSize="18" Click="addDelcustBtn_Click"/>
+                    <Button x:Name="upcustBtn" Content="EDIT CUSTOMERS" Margin="24, 0, 24 ,0" Height="60" Width="180" Foreground="White" Background="OrangeRed" FontWeight="Bold" FontSize="18" Click="upcustBtn_Click" />
+                    <Button x:Name="feedBtn" Content="VIEW FEEDBACK" Margin="24, 0, 24 ,0"  Height="60" Width="180" Foreground="White" Background="OrangeRed" FontWeight="Bold" FontSize="18" Click="feedBtn_Click" />
+                    <Button x:Name="signOutBtn" Content="SIGN OUT" Margin="24, 0, 24 ,0" Height="60" Width="130" Foreground="White" Background="OrangeRed" FontWeight="Bold" FontSize="18" Click="signOutBtn_Click" /> 
+        </StackPanel>
+            <StackPanel Grid.Row="1" Orientation="Vertical">
+                <TextBox Text="ADMIN"  IsReadOnly="True"  Height="60" Width="180" Foreground="OrangeRed" FontWeight="Bold" FontSize="24" HorizontalAlignment="Right" TextAlignment="Center" BorderBrush="{x:Null}" AllowFocusOnInteraction="False" AllowFocusWhenDisabled="False" IsDoubleTapEnabled="False"></TextBox>
+            </StackPanel>
+            <StackPanel Grid.Row="2" Orientation="Vertical" Background="FloralWhite">
+                <TextBox Text="Add a customer account"  IsReadOnly="True" Margin="24, 24, 24 ,0" FontSize="24" FontWeight="Bold" Height="50" Width="500" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" AllowFocusOnInteraction="False" AllowFocusWhenDisabled="False" IsDoubleTapEnabled="False"></TextBox>
+                <TextBox x:Name="fName" PlaceholderText="First Name" Margin="24, 24, 24 ,0" FontSize="24" Height="50" Width="500"  Background="White"></TextBox>
+                <TextBox x:Name="lName" PlaceholderText="Last Name" Margin="24, 24, 24 ,0" FontSize="24" Height="50" Width="500"  Background="White"></TextBox>
+                <TextBox x:Name="email" PlaceholderText="Email" Margin="24, 24, 24 ,0" FontSize="24" Height="50" Width="500"  Background="White"></TextBox>
+                <TextBox x:Name="phoneNo" PlaceholderText="Phone Number" Margin="24, 24, 24 ,0" FontSize="24" Height="50" Width="500"  Background="White"></TextBox>
+                <TextBox x:Name="password" PlaceholderText="Password"  Margin="24, 24, 24 ,0" FontSize="24" Height="50" Width="500"  Background="White"></TextBox>
+                <Button x:Name="addAccBtn" Content="ADD ACCOUNT" Margin="24, 24, 24 ,0" FontWeight="Bold" FontSize="24" Height="60" Width="250" Foreground="White" Background="Green" HorizontalAlignment="Center" Click="addAccBtn_Click"></Button>
+            </StackPanel>
+            <StackPanel Grid.Row="3" Orientation="Horizontal" Background="FloralWhite">
+                <TextBox Text="Delete customer by ID"  IsReadOnly="True" Margin="24, 24, 24 ,0" FontSize="24" FontWeight="Bold" Height="50" Width="310"  Background="{x:Null}" BorderBrush="{x:Null}" AllowFocusOnInteraction="False" AllowFocusWhenDisabled="False" IsDoubleTapEnabled="False"></TextBox>
+                <TextBox x:Name="custID" PlaceholderText="Customer ID" Margin="24, 24, 24 ,0" FontSize="24" Height="50" Width="300"  Background="White"></TextBox>
+                <Button x:Name="delIDBtn" Content="DELETE ACCOUNT" Margin="372, 24, 24 ,0" FontWeight="Bold" FontSize="24" Height="60" Width="250" Foreground="White" Background="Green" HorizontalAlignment="Center" Click="delIDBtn_Click"></Button>
+            </StackPanel>
+            <StackPanel Grid.Row="4" Orientation="Horizontal" Background="FloralWhite">
+                <TextBox Text="Delete customer by name"  IsReadOnly="True" Margin="24, 24, 24 ,0" FontSize="24" FontWeight="Bold" Height="50" Width="310"  Background="{x:Null}" BorderBrush="{x:Null}" AllowFocusOnInteraction="False" AllowFocusWhenDisabled="False" IsDoubleTapEnabled="False"></TextBox>
+                <TextBox x:Name="fNameDel" PlaceholderText="First Name" Margin="24, 24, 24 ,0" FontSize="24" Height="50" Width="300"  Background="White"></TextBox>
+                <TextBox x:Name="lNameDel" PlaceholderText="Last Name" Margin="24, 24, 24 ,0" FontSize="24" Height="50" Width="300"  Background="White"></TextBox>
+                <Button x:Name="delNameBtn" Content="DELETE ACCOUNT" Margin="24, 24, 24 ,0" FontWeight="Bold" FontSize="24" Height="60" Width="250" Foreground="White" Background="Green" HorizontalAlignment="Center" Click="delNameBtn_Click"></Button>
+            </StackPanel>
+        </Grid>
+        </ScrollViewer>
+</Page>
